@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Introduction to JavaScript</title>
+</head>
+<body>
+<h1>JavaScript　入門</h1>
+<p>ボタンをクリックすると日付を表示します。</p>
+<button onclick="dateFunction011()">日付を表示</button>
+<p id="date011">ここに現在の「年月日」が表示されます。</p>
+<script>
+function dateFunction011() {
+//日付オブジェクトを作成する
+var dd = new Date();
+//「年」を取得する
+var YYYY = dd.getFullYear();
+//「月」を取得する
+var MM = dd.getMonth()+1;
+//「日」を取得する
+var DD = dd.getDate();
+//段落タグ("date011")の中身を置き換える
+var pelem011 = document.getElementById("date011");
+pelem011.innerHTML = YYYY + "/" + MM + "/" + DD;
+}
+</script>
+</body>
+</html>
